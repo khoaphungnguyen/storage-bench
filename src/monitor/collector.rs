@@ -39,7 +39,7 @@ impl MonitorCollector {
         Self {
             cpu_monitor: CpuMonitor::new(),
             memory_monitor: MemoryMonitor::new(),
-            numa_monitor: NumaMonitor::new(),
+            numa_monitor: NumaMonitor::default(),
             io_monitor: device_path.map(IoStatsMonitor::new),
         }
     }

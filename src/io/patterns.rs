@@ -50,4 +50,19 @@ impl IoPattern {
     pub fn is_read(&self, read_percent: u8) -> bool {
         self.rng.lock().unwrap().gen_range(0..100) < read_percent
     }
+    
+    /// Get the I/O mode
+    pub fn mode(&self) -> IoMode {
+        self.mode
+    }
+    
+    /// Get block size
+    pub fn block_size(&self) -> usize {
+        self.block_size
+    }
+    
+    /// Get device size
+    pub fn device_size(&self) -> u64 {
+        self.device_size
+    }
 }

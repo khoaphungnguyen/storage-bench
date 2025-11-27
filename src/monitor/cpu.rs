@@ -1,5 +1,4 @@
 use sysinfo::System;
-use std::time::Duration;
 
 /// CPU monitoring
 pub struct CpuMonitor {
